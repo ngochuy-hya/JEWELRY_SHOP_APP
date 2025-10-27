@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Spacer (ẩn) để dịch icon sang phải hơn -->
+    <item
+        android:id="@+id/spacer"
+        android:title=""
+        android:enabled="false"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <!-- Icon tìm kiếm -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title=""
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_chat"
+        android:icon="@drawable/ic_message"
+        android:title=""
+        app:showAsAction="always"/>
+</menu>

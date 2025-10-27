@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="6dp"
+    android:gravity="center_vertical"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+
+    <!-- Nhãn 5★, 4★,... -->
+    <TextView
+        android:id="@+id/txtStarLabel"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:text="5 ★"
+        android:textSize="14sp"
+        android:textColor="#777777"
+        android:gravity="end" />
+
+    <!-- Thanh progress -->
+    <ProgressBar
+        android:id="@+id/progressStar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:progress="0"
+        android:max="100"
+        android:progressTint="@color/green"
+        android:progressBackgroundTint="#EEEEEE" />
+
+    <!-- Số người đánh giá -->
+    <TextView
+        android:id="@+id/txtStarCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="14sp"
+        android:layout_marginStart="8dp"
+        android:textColor="#333333" />
+</LinearLayout>

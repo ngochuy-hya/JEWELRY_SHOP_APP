@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_margin="6dp">
+
+    <!-- Ảnh review thực -->
+    <ImageView
+        android:id="@+id/imgReview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_image_placeholder"
+        android:contentDescription="Review image" />
+</FrameLayout>

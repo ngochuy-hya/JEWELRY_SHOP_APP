@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:paddingVertical="6dp"
+    android:paddingHorizontal="12dp"
+    android:gravity="start">
+
+    <!-- Avatar -->
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_logo"
+        android:layout_marginEnd="6dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_circle_white"
+        android:visibility="visible" />
+
+    <!-- Bong bóng -->
+    <LinearLayout
+        android:id="@+id/layoutBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_message_left"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Text tin nhắn -->
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tin nhắn từ admin..."
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+        <!-- Ảnh đính kèm -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMessageImages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:visibility="gone"
+            tools:listitem="@layout/item_image_inline" />
+
+        <!-- Thời gian gửi -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:45 AM"
+            android:textSize="11sp"
+            android:textColor="#999999"
+            android:layout_marginTop="4dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Bottom menu -->
+    <item
+        android:id="@+id/fragment_homepage"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/fragment_orders"
+        android:icon="@drawable/ic_orders"
+        android:title="Orders"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/fragment_cart"
+        android:icon="@drawable/ic_cart"
+        android:title="Cart"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/fragment_favorite"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorite"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/fragment_aboutus"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+
+    <!-- Spacer ẩn -->
+    <item
+        android:id="@+id/spacer"
+        android:title=""
+        android:enabled="false"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <!-- Top right icons -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_chat"
+        android:icon="@drawable/ic_message"
+        android:title="Chat"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/ic_notifi"
+        android:title="Notifications"
+        app:showAsAction="always"/>
+</menu>

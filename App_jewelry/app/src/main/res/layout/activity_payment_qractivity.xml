@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Title Bar -->
+    <TextView
+        android:id="@+id/tvPaymentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay with QR Code"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textColor="#000000" />
+
+    <!-- QR Code -->
+    <ImageView
+        android:id="@+id/imgQrCode"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_qr_placeholder"
+        android:scaleType="fitCenter"
+        android:contentDescription="QR Code"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp" />
+    <TextView
+        android:id="@+id/tvQrExpiryTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="QR code is valid for 5 minutes"
+        android:textSize="14sp"
+        android:textColor="#FF0000"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Order Amount Info -->
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amount: 540,000₫"
+        android:textSize="18sp"
+        android:textColor="#B47D2D"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="* * Scan QR code with app to pay on web."
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:paddingHorizontal="12dp" />
+
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="#888888"
+        android:textColor="@android:color/white" />
+</LinearLayout>

@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="6dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Bong bóng tin nhắn -->
+    <LinearLayout
+        android:id="@+id/layoutBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:background="@drawable/bg_message_right"
+        android:padding="12dp">
+
+        <!-- Tin nhắn văn bản -->
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tối chở bé đi ăn nha 🥰"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:visibility="visible"
+            tools:text="Tối chở bé đi ăn nha 🥰" />
+
+        <!-- Danh sách ảnh đính kèm -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMessageImages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:visibility="gone"
+            tools:listitem="@layout/item_image_inline" />
+
+        <!-- Thời gian gửi (ẩn mặc định) -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:45 PM"
+            android:textSize="11sp"
+            android:textColor="#D0D0D0"
+            android:layout_marginTop="4dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

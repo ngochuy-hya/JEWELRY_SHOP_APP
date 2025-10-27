@@ -1,0 +1,241 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <!-- Banner với ViewPager2 và dot nằm bên trong -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBanner"
+            android:layout_width="0dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!-- Dot indicator nằm đè bên trong banner -->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayoutIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:background="@android:color/transparent"
+                    app:tabIndicatorColor="@android:color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabGravity="center"
+                    app:tabMode="fixed"
+                    app:tabRippleColor="@android:color/transparent" />
+
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:id="@+id/textTitleCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discover Our Collections"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cardBanner"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@id/textTitleCategory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:orientation="horizontal" />
+
+        <!-- Tiêu đề Thương hiệu -->
+        <TextView
+            android:id="@+id/textBrandTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Our Brands"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/recyclerCategory"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- RecyclerView cho Thương hiệu -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerBrands"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            app:layout_constraintTop_toBottomOf="@id/textBrandTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal" />
+
+
+        <!-- Tiêu đề Today Offer -->
+        <TextView
+            android:id="@+id/textTodayOfferTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today Offer"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/recyclerBrands"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- RecyclerView ngang hiển thị sản phẩm khuyến mãi -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTodayOffer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            app:layout_constraintTop_toBottomOf="@id/textTodayOfferTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal" />
+        <TextView
+            android:id="@+id/viewAllTodayOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View all"
+            android:textColor="@color/teal_700"
+            android:textSize="14sp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="@id/textTodayOfferTitle"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Khoảng trắng bên dưới cho padding cuộn đẹp -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            app:layout_constraintTop_toBottomOf="@id/recyclerTodayOffer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Tiêu đề New Arrival -->
+        <TextView
+            android:id="@+id/textNewArrivalTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Arrival"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/recyclerTodayOffer"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- RecyclerView ngang cho Hàng Mới Đến -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerNewArrival"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            app:layout_constraintTop_toBottomOf="@id/textNewArrivalTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal" />
+        <!-- View all New Arrival -->
+        <TextView
+            android:id="@+id/viewAllNewArrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View all"
+            android:textColor="@color/teal_700"
+            android:textSize="14sp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="@id/textNewArrivalTitle"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <!-- Tiêu đề Best Seller -->
+        <TextView
+            android:id="@+id/textBestSellerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Seller"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/recyclerNewArrival"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- RecyclerView ngang cho Best Seller -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerBestSeller"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/textBestSellerTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <!-- View all Best Seller -->
+        <TextView
+            android:id="@+id/viewAllBestSeller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View all"
+            android:textColor="@color/teal_700"
+            android:textSize="14sp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="@id/textBestSellerTitle"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

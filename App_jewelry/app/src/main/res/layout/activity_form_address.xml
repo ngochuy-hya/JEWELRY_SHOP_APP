@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_arrow_left"
+                android:background="@drawable/bg_circle_white"
+                android:padding="8dp"
+                android:contentDescription="Back"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="Address"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 / 4"
+                android:textColor="#B47D2D" />
+        </LinearLayout>
+
+        <!-- Select Address -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delivery Address"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvSelectAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Address"
+                android:textColor="#B47D2D"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="4dp" />
+        </LinearLayout>
+
+        <!-- Form Fields (đã áp dụng style từ file đầu) -->
+        <EditText
+            android:id="@+id/edtContactName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:hint="Contact Person Name"
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="16dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"/>
+
+        <EditText
+            android:id="@+id/edtContactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:hint="Contact Number"
+            android:inputType="phone"
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="16dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"/>
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:hint="Email ID (Optional)"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="16dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"/>
+
+        <EditText
+            android:id="@+id/edtState"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:hint="State"
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="16dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"/>
+
+        <EditText
+            android:id="@+id/edtCity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:hint="City"
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="16dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"/>
+
+        <EditText
+            android:id="@+id/edtArea"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:hint="Area (Ward)"
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="16dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"/>
+
+        <EditText
+            android:id="@+id/edtAddressLine"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:hint="Address (Street and No.)"
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="16dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"/>
+
+        <EditText
+            android:id="@+id/edtLandmark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_edittext"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:hint="Landmark (Optional)"
+            android:paddingHorizontal="16dp" />
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Next"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#B47D2D"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>

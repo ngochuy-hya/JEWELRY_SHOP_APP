@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:elevation="2dp">
+
+    <!-- PHẦN 1: Avatar, Tên, Ngày, Rating -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Avatar hình tròn chữ cái -->
+        <TextView
+            android:id="@+id/avatarText"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="K"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/bg_circle_white"
+            android:backgroundTint="#EFE686"
+            android:layout_marginEnd="12dp"
+            android:elevation="1dp" />
+
+        <!-- Thông tin tên + ngày -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtReviewerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nguyễn Văn A"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtReviewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 July 2025"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- RatingBar -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:isIndicator="true"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:rating="4.0"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- PHẦN 2: Tiêu đề -->
+    <TextView
+        android:id="@+id/txtReviewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sản phẩm rất đẹp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- PHẦN 3: Nội dung -->
+    <TextView
+        android:id="@+id/txtReviewContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tôi đã mua tặng vợ và cô ấy rất thích. Màu sắc sang trọng, đúng như hình."
+        android:textColor="#444444"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp" />
+
+    <!-- PHẦN 4: Ảnh review gửi lên -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerReviewImages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:overScrollMode="never"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        tools:listitem="@layout/item_review_image" />
+</LinearLayout>
